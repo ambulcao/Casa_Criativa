@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="/logo.png" alt="Imagem da Logomarca">
+        </a>
+    </header>
+
+    <main>
+        <p>
+            Ficar em casa em períodos longos, não deve ser nada fácil.
+        </p>
+        <p>
+            Por isso, iremos catalogar idéias, <strong>brincadeiras, jogos, filmes,
+                livros, cursos, dicas</strong> e tudo que for necessário para tornar
+            esse momento mais interessante.
+        </p>
+        <p>
+            Comece clicando em ver idéias para ver as idéias cadastradas
+            e contribua adicionando a sua idéia.
+        </p>
+    </main>
+
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Ideia</button>
+
+        <a href="/ideias" class="button">Ver Ideia</a>
+    </section>
+
+    <footer id="footer">
+        Com 💻 <a href="http://rocketseat.com.br" target="_blank">AMB Tech Solutions</a>
+    </footer>
+
+</section>
+
+<section id="last-ideias">
+    {% include "all_ideas.html" %}
+</section>
+
+{% endblock %}
